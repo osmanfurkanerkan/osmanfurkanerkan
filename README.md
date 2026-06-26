@@ -12,11 +12,7 @@
 
 ### About
 
-3rd-year Computer Engineering student at Ege University. Doing ML research at TÜBİTAK on corneal transplant triage — scoring patient compatibility from clinical data before surgery.
-
-During my Microsoft internship I built a fully local RAG app: Phi-3.5 Mini on Foundry Local, TF-IDF retrieval, SQLite backend, Express.js API. No cloud, no external API.
-
-2nd place at Turkcell Code Night Hackathon. Co-founder of EBMT, a student tech org at Ege.
+I combine theory with modern software practice to build intelligent systems. From R&D work at TÜBİTAK to hackathon marathons, from community leadership at EBMT to my personal projects, the only thing that changes is the problem; my approach always stays the same: solving a real problem with the right technology.
 
 ---
 
