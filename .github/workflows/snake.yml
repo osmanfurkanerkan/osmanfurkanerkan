@@ -5,10 +5,12 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
 
@@ -20,9 +22,12 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: output
-          folder: dist
-          clean: false
+      - name: Push output
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          cd dist
+          git init
+          git add .
+          git commit -m "update snake"
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/osmanfurkanerkan/osmanfurkanerkan.git HEAD:output
